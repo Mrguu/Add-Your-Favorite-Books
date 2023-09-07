@@ -30,8 +30,8 @@ function Add() {
   };
 
   return (
-    <div className="w-full md:h-screen h-full bg-sky-500 flex justify-center items-center">
-      <div className="py-5 flex flex-col justify-center items-center gap-5 bg-sky-600 drop-shadow-2xl rounded-xl md:w-1/3 w-5/6 my-5 p-3">
+    <div className="w-full md:h-scree bg-sky-500 flex justify-center items-center">
+      <div className="py-5 flex flex-col justify-center items-center gap-5 bg-sky-600 drop-shadow-2xl rounded-xl md:w-1/3 w-5/6 my-20 p-3">
         <div className="text-2xl font-bold text-sky-50">Add Book</div>
         <input
           type="text"
