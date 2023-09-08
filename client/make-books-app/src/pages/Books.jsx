@@ -7,9 +7,7 @@ function Books() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(
-        `https://add-your-fav-books-server.onrender.com/books/${id}`
-      );
+      await axios.delete(`http://localhost:5000/books/${id}`);
       window.location.reload();
     } catch (err) {
       console.log(err);
@@ -19,9 +17,7 @@ function Books() {
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const res = await axios.get(
-          "https://add-your-fav-books-server.onrender.com/books"
-        );
+        const res = await axios.get("http://localhost:5000/books");
         setBooks(res.data);
       } catch (err) {
         console.log(err);
