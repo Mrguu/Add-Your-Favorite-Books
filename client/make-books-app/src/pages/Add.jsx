@@ -22,7 +22,10 @@ function Add() {
   const handleClick = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/books", books);
+      await axios.post(
+        "https://add-your-fav-books-server.onrender.com/books",
+        books
+      );
       Navigate("/");
     } catch (err) {
       console.log(err);
