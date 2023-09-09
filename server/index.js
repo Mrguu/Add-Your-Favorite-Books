@@ -2,17 +2,15 @@ import express from "express";
 import mysql from "mysql";
 import cors from "cors";
 const app = express();
-const dbUrl = process.env.DB_URL;
 
 app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "sqluser",
-  password: "password",
-  database: "test1",
-  port: 3306,
+  host: "behrfw55esatfhw6a6r7-mysql.services.clever-cloud.com",
+  user: "ueqynl9ndjo36h2a",
+  password: "CsfKYM0c1hCvyRf3vTdA",
+  database: "behrfw55esatfhw6a6r7",
 });
 
 app.get("/", (req, res) => {
