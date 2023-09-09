@@ -22,7 +22,10 @@ function Add() {
   const handleClick = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/books", books);
+      await axios.post(
+        "https://add-your-fav-books-server.onrender.com/books",
+        books
+      );
       Navigate("/");
     } catch (err) {
       console.log(err);
@@ -30,7 +33,7 @@ function Add() {
   };
 
   return (
-    <div className="w-full md:h-scree bg-sky-500 flex justify-center items-center">
+    <div className="w-full md:h-screen bg-sky-500 flex justify-center items-center">
       <div className="py-5 flex flex-col justify-center items-center gap-5 bg-sky-600 drop-shadow-2xl rounded-xl md:w-1/3 w-5/6 my-20 p-3">
         <div className="text-2xl font-bold text-sky-50">Add Book</div>
         <input
@@ -50,7 +53,7 @@ function Add() {
         />
         <input
           type="text"
-          placeholder="price"
+          placeholder="current price"
           onChange={handleChange}
           name="price"
           className="px-3 py-2 rounded-lg text-xs md:w-5/6 w-11/12"

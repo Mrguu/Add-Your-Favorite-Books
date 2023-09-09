@@ -27,7 +27,10 @@ function Update() {
     console.log("Book ID to update:", bookId);
     e.preventDefault();
     try {
-      await axios.put("http://localhost:5000/books/" + bookId, books);
+      await axios.put(
+        "https://add-your-fav-books-server.onrender.com/books/" + bookId,
+        books
+      );
       Navigate("/");
     } catch (err) {
       console.log(err);
