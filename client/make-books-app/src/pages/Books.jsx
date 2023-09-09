@@ -34,11 +34,11 @@ function Books() {
       <div className="sm:text-3xl text-sm text-white font-bold my-10">
         Add your favorite book
       </div>
-      <div className="w-5/6 bg-sky-700 text-black sm:p-10 p-3 drop-shadow-2xl flex flex-col md:flex-row md:items-stretch items-center justify-center rounded-lg flex-wrap sm:gap-5 gap-2">
+      <div className="w-11/12 bg-sky-700 text-black sm:p-10 p-3 drop-shadow-2xl flex flex-col md:flex-row md:items-stretch items-center justify-center rounded-lg flex-wrap sm:gap-5 gap-5 mb-20">
         {books.map((book) => (
           <div
             key={book.id}
-            className="sm:p-3 p-1 bg-sky-50 sm:w-60 w-40 flex flex-col justify-center items-center rounded text-center drop-shadow-2xl">
+            className="sm:p-3 p-1 bg-sky-50 sm:w-60 w-11/12 flex flex-col justify-center items-center rounded text-center drop-shadow-2xl">
             {book.cover && (
               <img src={book.cover} className="w-full object-cove" alt="" />
             )}
